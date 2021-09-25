@@ -23,6 +23,22 @@ extension BudgetItem {
     @NSManaged public var nextPayDate: Date?
     @NSManaged public var id: UUID?
     
+    // wrappers
+    public var wrappedName: String {
+        name ?? "No name"
+    }
+    
+    public var wrappedDateAdded: Date {
+        dateAdded ?? Date()
+    }
+    
+    public var wrappedNextPayDate: Date {
+        nextPayDate ?? Date()
+    }
+    
+    public var wrappedID: UUID {
+        id ?? UUID()
+    }
 }
 
 extension BudgetItem : Identifiable {
