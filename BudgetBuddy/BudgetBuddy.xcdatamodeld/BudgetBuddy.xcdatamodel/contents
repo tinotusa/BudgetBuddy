@@ -7,8 +7,9 @@
         <attribute name="isSubscription" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="nextPayDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" optional="YES" attributeType="String" customClassName="ItemType"/>
     </entity>
     <elements>
-        <element name="BudgetItem" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="BudgetItem" positionX="-63" positionY="-18" width="128" height="134"/>
     </elements>
 </model>

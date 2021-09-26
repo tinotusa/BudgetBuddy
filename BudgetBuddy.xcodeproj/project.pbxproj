@@ -13,8 +13,14 @@
 		21AE9B4626FF20110053A13E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21AE9B4526FF20110053A13E /* Preview Assets.xcassets */; };
 		21AE9B4826FF20110053A13E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AE9B4726FF20110053A13E /* Persistence.swift */; };
 		21AE9B4B26FF20110053A13E /* BudgetBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21AE9B4926FF20110053A13E /* BudgetBuddy.xcdatamodeld */; };
-		21AE9B5926FF22540053A13E /* BudgetItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AE9B5726FF22540053A13E /* BudgetItem+CoreDataClass.swift */; };
-		21AE9B5A26FF22540053A13E /* BudgetItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AE9B5826FF22540053A13E /* BudgetItem+CoreDataProperties.swift */; };
+		21E4792F26FFF45D004A27F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4792E26FFF45D004A27F8 /* User.swift */; };
+		21E4793126FFFD2B004A27F8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793026FFFD2B004A27F8 /* LoginView.swift */; };
+		21E4793327000012004A27F8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793227000011004A27F8 /* HomeView.swift */; };
+		21E47938270000BE004A27F8 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E47937270000BE004A27F8 /* AddView.swift */; };
+		21E4793A27000183004A27F8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793927000183004A27F8 /* UserModel.swift */; };
+		21E4793C2700160C004A27F8 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793B2700160C004A27F8 /* ItemType.swift */; };
+		21E4793F27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793D27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift */; };
+		21E4794027001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793E27001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +31,14 @@
 		21AE9B4526FF20110053A13E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		21AE9B4726FF20110053A13E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		21AE9B4A26FF20110053A13E /* BudgetBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetBuddy.xcdatamodel; sourceTree = "<group>"; };
-		21AE9B5726FF22540053A13E /* BudgetItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		21AE9B5826FF22540053A13E /* BudgetItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		21E4792E26FFF45D004A27F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21E4793026FFFD2B004A27F8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		21E4793227000011004A27F8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		21E47937270000BE004A27F8 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		21E4793927000183004A27F8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		21E4793B2700160C004A27F8 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		21E4793D27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		21E4793E27001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				21AE9B3E26FF200F0053A13E /* BudgetBuddyApp.swift */,
+				21E4792D26FFF451004A27F8 /* Model */,
 				21AE9B5526FF21160053A13E /* CoreData */,
 				21AE9B5626FF212B0053A13E /* Views */,
 				21AE9B4226FF20110053A13E /* Assets.xcassets */,
@@ -80,8 +93,8 @@
 		21AE9B5526FF21160053A13E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				21AE9B5726FF22540053A13E /* BudgetItem+CoreDataClass.swift */,
-				21AE9B5826FF22540053A13E /* BudgetItem+CoreDataProperties.swift */,
+				21E4793D27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift */,
+				21E4793E27001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift */,
 				21AE9B4726FF20110053A13E /* Persistence.swift */,
 			);
 			path = CoreData;
@@ -91,8 +104,21 @@
 			isa = PBXGroup;
 			children = (
 				21AE9B4026FF200F0053A13E /* ContentView.swift */,
+				21E4793026FFFD2B004A27F8 /* LoginView.swift */,
+				21E47937270000BE004A27F8 /* AddView.swift */,
+				21E4793227000011004A27F8 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		21E4792D26FFF451004A27F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21E4792E26FFF45D004A27F8 /* User.swift */,
+				21E4793927000183004A27F8 /* UserModel.swift */,
+				21E4793B2700160C004A27F8 /* ItemType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,12 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21AE9B5926FF22540053A13E /* BudgetItem+CoreDataClass.swift in Sources */,
+				21E4793327000012004A27F8 /* HomeView.swift in Sources */,
+				21E4793C2700160C004A27F8 /* ItemType.swift in Sources */,
+				21E47938270000BE004A27F8 /* AddView.swift in Sources */,
 				21AE9B4826FF20110053A13E /* Persistence.swift in Sources */,
+				21E4793F27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift in Sources */,
 				21AE9B4126FF200F0053A13E /* ContentView.swift in Sources */,
-				21AE9B5A26FF22540053A13E /* BudgetItem+CoreDataProperties.swift in Sources */,
 				21AE9B3F26FF200F0053A13E /* BudgetBuddyApp.swift in Sources */,
 				21AE9B4B26FF20110053A13E /* BudgetBuddy.xcdatamodeld in Sources */,
+				21E4793126FFFD2B004A27F8 /* LoginView.swift in Sources */,
+				21E4792F26FFF45D004A27F8 /* User.swift in Sources */,
+				21E4793A27000183004A27F8 /* UserModel.swift in Sources */,
+				21E4794027001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

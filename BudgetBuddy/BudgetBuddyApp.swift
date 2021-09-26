@@ -10,11 +10,16 @@ import SwiftUI
 @main
 struct BudgetBuddyApp: App {
     let persistenceController = PersistenceController.shared
-
+    @StateObject var userModel = UserModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(
+                    \.managedObjectContext,
+                     persistenceController.container.viewContext
+                )
+                .environmentObject(userModel)
         }
     }
 }
