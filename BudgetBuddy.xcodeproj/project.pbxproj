@@ -21,6 +21,7 @@
 		21E4793C2700160C004A27F8 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793B2700160C004A27F8 /* ItemType.swift */; };
 		21E4793F27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793D27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift */; };
 		21E4794027001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793E27001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift */; };
+		21E47942270045D5004A27F8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E47941270045D5004A27F8 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		21E4793B2700160C004A27F8 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		21E4793D27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		21E4793E27001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		21E47941270045D5004A27F8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				21E4793026FFFD2B004A27F8 /* LoginView.swift */,
 				21E47937270000BE004A27F8 /* AddView.swift */,
 				21E4793227000011004A27F8 /* HomeView.swift */,
+				21E47941270045D5004A27F8 /* HistoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				21E4793C2700160C004A27F8 /* ItemType.swift in Sources */,
 				21E47938270000BE004A27F8 /* AddView.swift in Sources */,
 				21AE9B4826FF20110053A13E /* Persistence.swift in Sources */,
+				21E47942270045D5004A27F8 /* HistoryView.swift in Sources */,
 				21E4793F27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift in Sources */,
 				21AE9B4126FF200F0053A13E /* ContentView.swift in Sources */,
 				21AE9B3F26FF200F0053A13E /* BudgetBuddyApp.swift in Sources */,

@@ -29,6 +29,17 @@ struct User {
         case .income: income -= item.amount
         }
     }
+    
+    mutating func update(_ item: BudgetItem) {
+        switch item.wrappedType {
+        case .income:
+            balance += item.amount
+            income += item.amount
+        case .expense:
+            balance -= item.amount
+            spent += item.amount
+        }
+    }
 }
 
 extension User: Codable {

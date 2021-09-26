@@ -109,13 +109,6 @@ struct AddView: View {
         }
         item.amount = Double(amount) ?? 0
         
-        // TODO: - maybe have an array of items in the user?
-        switch item.wrappedType {
-        case .expense:
-            userModel.spending += item.amount
-        case .income:
-            userModel.income += item.amount
-        }
 
         item.dateAdded = Date()
         item.isSubscription = isSubscription
@@ -138,6 +131,9 @@ struct AddView: View {
                 item.nextPayDate = futureDate
             }
         }
+        
+        // TODO: - maybe have an array of items in the user?
+        userModel.update(item)
     }
 }
 

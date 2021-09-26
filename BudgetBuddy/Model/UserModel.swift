@@ -29,6 +29,10 @@ final class UserModel: ObservableObject {
     func delete(_ item: BudgetItem) {
         user.delete(item)
     }
+
+    func update(_ item: BudgetItem) {
+        user.update(item)
+    }
 }
 
 // MARK: - GETTERS SETTERS

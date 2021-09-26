@@ -9,16 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("someStore") var hasUser: Bool = false
+    enum Tab {
+        case home, history
+    }
+    @State private var selectedTab = Tab.home
     
     var body: some View {
-        NavigationView {
-            if hasUser {
+        if hasUser {
+            TabView(selection: $selectedTab) {
                 HomeView()
-            } else {
-                LoginView(hasUser: $hasUser)
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                HistoryView()
+                    .tabItem {
+                        Label("History", systemImage: "chart.line.uptrend.xyaxis")
+                    }
             }
+        } else {
+            LoginView(hasUser: $hasUser)
         }
-        .navigationBarHidden(true)
     }
 }
 
