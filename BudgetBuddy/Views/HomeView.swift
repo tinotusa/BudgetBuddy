@@ -15,7 +15,6 @@ struct HomeView: View {
     
     @EnvironmentObject var userModel: UserModel
     
-    @State private var showingAddSheet = false
     
     var body: some View {
         ZStack {
@@ -30,11 +29,8 @@ struct HomeView: View {
                 recentItems
                     .padding(.horizontal)
             }
-            .sheet(isPresented: $showingAddSheet) {
-                AddView()
-            }
             
-            floatingAddButton
+//            floatingAddButton
         }
     }
     /// The opacity for the "cards".
@@ -54,29 +50,6 @@ private extension HomeView {
                     .padding(.horizontal)
             }
             .foregroundColor(.white)
-    }
-    
-    // TODO: Move me to a better place
-    var floatingAddButton: some View {
-        VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Button {
-                    showingAddSheet = true
-                } label: {
-                    Image(systemName: "plus")
-                        .font(.title)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color("lightBlue"))
-                        .clipShape(Circle())
-                        .shadow(radius: 10)
-                }
-            }
-            Spacer()
-        }
-        .padding(.horizontal)
     }
     
     var recentItems: some View {
