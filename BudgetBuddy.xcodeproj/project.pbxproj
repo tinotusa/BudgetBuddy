@@ -22,6 +22,9 @@
 		21E4793F27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793D27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift */; };
 		21E4794027001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4793E27001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift */; };
 		21E47942270045D5004A27F8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E47941270045D5004A27F8 /* HistoryView.swift */; };
+		21E4796027007A3C004A27F8 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4795F27007A3C004A27F8 /* DoubleExtension.swift */; };
+		21E4796227007A5E004A27F8 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4796127007A5E004A27F8 /* ItemRowView.swift */; };
+		21E4796427007C2A004A27F8 /* CustomRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4796327007C2A004A27F8 /* CustomRoundedRectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		21E4793D27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		21E4793E27001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		21E47941270045D5004A27F8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		21E4795F27007A3C004A27F8 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		21E4796127007A5E004A27F8 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
+		21E4796327007C2A004A27F8 /* CustomRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedRectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				21AE9B3E26FF200F0053A13E /* BudgetBuddyApp.swift */,
-				21E4792D26FFF451004A27F8 /* Model */,
-				21AE9B5526FF21160053A13E /* CoreData */,
+				21E4795E27007A29004A27F8 /* Extensions */,
+				21E4792D26FFF451004A27F8 /* Models */,
+				21AE9B5526FF21160053A13E /* Core Data */,
 				21AE9B5626FF212B0053A13E /* Views */,
 				21AE9B4226FF20110053A13E /* Assets.xcassets */,
 				21AE9B4926FF20110053A13E /* BudgetBuddy.xcdatamodeld */,
@@ -92,36 +99,46 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		21AE9B5526FF21160053A13E /* CoreData */ = {
+		21AE9B5526FF21160053A13E /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
 				21E4793D27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift */,
 				21E4793E27001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift */,
 				21AE9B4726FF20110053A13E /* Persistence.swift */,
 			);
-			path = CoreData;
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		21AE9B5626FF212B0053A13E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				21AE9B4026FF200F0053A13E /* ContentView.swift */,
-				21E4793026FFFD2B004A27F8 /* LoginView.swift */,
-				21E47937270000BE004A27F8 /* AddView.swift */,
 				21E4793227000011004A27F8 /* HomeView.swift */,
 				21E47941270045D5004A27F8 /* HistoryView.swift */,
+				21E4793026FFFD2B004A27F8 /* LoginView.swift */,
+				21E47937270000BE004A27F8 /* AddView.swift */,
+				21E4796127007A5E004A27F8 /* ItemRowView.swift */,
+				21E4796327007C2A004A27F8 /* CustomRoundedRectangle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		21E4792D26FFF451004A27F8 /* Model */ = {
+		21E4792D26FFF451004A27F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				21E4792E26FFF45D004A27F8 /* User.swift */,
 				21E4793927000183004A27F8 /* UserModel.swift */,
 				21E4793B2700160C004A27F8 /* ItemType.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21E4795E27007A29004A27F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21E4795F27007A3C004A27F8 /* DoubleExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +219,14 @@
 				21E4793F27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift in Sources */,
 				21AE9B4126FF200F0053A13E /* ContentView.swift in Sources */,
 				21AE9B3F26FF200F0053A13E /* BudgetBuddyApp.swift in Sources */,
+				21E4796427007C2A004A27F8 /* CustomRoundedRectangle.swift in Sources */,
 				21AE9B4B26FF20110053A13E /* BudgetBuddy.xcdatamodeld in Sources */,
 				21E4793126FFFD2B004A27F8 /* LoginView.swift in Sources */,
 				21E4792F26FFF45D004A27F8 /* User.swift in Sources */,
 				21E4793A27000183004A27F8 /* UserModel.swift in Sources */,
+				21E4796027007A3C004A27F8 /* DoubleExtension.swift in Sources */,
 				21E4794027001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift in Sources */,
+				21E4796227007A5E004A27F8 /* ItemRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

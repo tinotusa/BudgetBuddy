@@ -11,15 +11,21 @@ import SwiftUI
 struct BudgetBuddyApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject var userModel = UserModel()
+    @AppStorage("hasUser") var hasUser: Bool = false
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(
-                    \.managedObjectContext,
-                     persistenceController.container.viewContext
-                )
-                .environmentObject(userModel)
+            if !hasUser {
+                LoginView(hasUser: $hasUser)
+                    .environmentObject(userModel)
+            } else {
+                ContentView()
+                    .environment(
+                        \.managedObjectContext,
+                         persistenceController.container.viewContext
+                    )
+                    .environmentObject(userModel)
+            }
         }
     }
 }

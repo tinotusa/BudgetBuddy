@@ -40,6 +40,9 @@ private extension LoginView {
     var allFieldsFilled: Bool {
         let name = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let balance = balance.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Double(balance) == nil {
+            return false
+        }
         return !name.isEmpty && !balance.isEmpty
     }
     
