@@ -8,3 +8,6 @@ TODO:
 - [x] add ui
 
 ## Screenshots
+
+![home view](./preview_pictures/home.png)
+![home view](./preview_pictures/history.png)
