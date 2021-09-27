@@ -57,6 +57,7 @@ struct SectorView: View {
     @State private var isSelected = false
     
     var body: some View {
+        // TODO: - fix layering bug (some labels are hidden under others)
         Sector(startAngle: startAngle, endAngle: endAngle)
             .fill(colour)
             .scaleEffect(isSelected ? 1.1 : 1)
@@ -89,15 +90,10 @@ struct SectorView: View {
 
 struct PieChartView: View {
     // inputs
-    let data = [10,20, 40.0, 2].sorted(by: >)
-    let colours: [Color] = [.red, .green, .blue, .yellow, .pink]
-    var linearGradient: LinearGradient {
-        LinearGradient (
-            colors: [.red, .green, .yellow],
-            startPoint: .top,
-            endPoint: .bottom
-        )
-    }
+    let data: [Double]
+    let labels: [String]
+    let colours: [Color]
+    var labelOffset = 70.0
     
     var body: some View {
         ZStack {
@@ -118,9 +114,8 @@ struct PieChartView: View {
                         endAngle: Angle(degrees: runningAngles[i]),
                         colour: colours[i],
                         label: "\(data[i]) (\(String(format: "%.1f%%", percentages[i])))",
-                        labelOffset: 80
+                        labelOffset: labelOffset
                     )
-                        .zIndex(1)
                 }
             }
         }
@@ -129,6 +124,10 @@ struct PieChartView: View {
 
 struct PieChartView_Previews: PreviewProvider {
     static var previews: some View {
-        PieChartView()
+        PieChartView(
+            data: [10.0, 20, 30, 40],
+            labels: ["10", "20", "30", "40"],
+            colours: [.red, .yellow, .blue, .green]
+        )
     }
 }
