@@ -46,19 +46,16 @@ struct HomeView: View {
 
 private extension HomeView {
     var historyView: some View {
-        ZStack(alignment: .topLeading) {
-            Color("lightBlue")
-                .opacity(opacity)
-            
-            Text("History")
-                .font(.title2)
-                .padding(.horizontal)
-            
-            HistoryView()
-        }
-        .foregroundColor(.white)
-        .cornerRadius(radius)
+        MonthlyTotalBarChart()
+            .card()
+            .overlay(alignment: .topLeading) {
+                Text("History")
+                    .font(.title2)
+                    .padding(.horizontal)
+            }
+            .foregroundColor(.white)
     }
+    
     // TODO: Move me to a better place
     var floatingAddButton: some View {
         VStack {
@@ -130,15 +127,6 @@ private extension HomeView {
         .foregroundColor(.white)
     }
     
-    var backgroundGradient: some View {
-        LinearGradient(
-            colors: [Color("lightBlue"), Color("darkBlue")],
-            startPoint: .top,
-            endPoint: .bottom
-        )
-            .ignoresSafeArea()
-    }
-    
 //    func formattedDate(_ date: Date) -> String {
 //        let formatter = DateFormatter()
 //        formatter.timeStyle = .none
@@ -146,7 +134,7 @@ private extension HomeView {
 //        formatter.dateFormat = "dd/MM/y"
 //        return formatter.string(from: date)
 //    }
-//
+
     func deleteAll() {
         budgetItems.forEach { item in
             userModel.delete(item)

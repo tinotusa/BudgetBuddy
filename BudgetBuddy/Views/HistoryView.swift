@@ -10,64 +10,40 @@ import SwiftUI
 struct HistoryView: View {
     @Environment(\.managedObjectContext) var context
     
-    @FetchRequest(
-        sortDescriptors: [.init(keyPath: \BudgetItem.name, ascending: true)]
-    ) var budgetItems: FetchedResults<BudgetItem>
-    
-    private var maxAmount: Double {
-        var max = 0.0
-        
-        for month in 0..<12 {
-            let monthSum = sumBudget(month)
-            if  monthSum > max {
-                max = monthSum
-            }
-        }
-        return max + 1
-    }
-    
-    private var locale: String {
-        return Locale.current.currencyCode ?? "AUD"
-    }
-    
+    @FetchRequest(sortDescriptors: [.init(keyPath: \BudgetItem.name, ascending: true)])
+    var budgetItems: FetchedResults<BudgetItem>
+   
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(0..<12) { month in
-                    VStack {
-                        Spacer()
-                        Text("\(sumBudget(month).formatted(.currency(code: locale)))")
-                            .font(.footnote)
-                            .rotationEffect(.degrees(-90))
-                            .offset(y: -20)
-                    Rectangle()
-                            .foregroundColor(.blue)
-                            .frame(width: 20, height: 200 * sumBudget(month) / maxAmount)
-                    Text(monthName(month)) // invalid frame dimension ??
-                        .font(.footnote)
-                        .frame(width: 30)
-                    }
-                }
+        ZStack {
+            backgroundGradient
+            
+            VStack(alignment: .leading) {
+                title
+                MonthlyTotalBarChart()
+                    .card()
+                    .frame(height: 400)
+                    .foregroundColor(.white)
+                recent
+                Spacer()
             }
             .padding(.horizontal)
         }
     }
-    
-    private func sumBudget(_ month: Int) -> Double {
-        // get all months
-        let months = budgetItems.filter { item in
-            Calendar
-                .current
-                .dateComponents([.month], from: item.wrappedDateAdded).month! == month + 1 // + 1 because of 0 based index
-        }
-        // and sum
-        return months.reduce(0.0) { result, item in result + item.amount }
+}
+
+private extension HistoryView {
+    var title: some View {
+        Text("History")
+            .foregroundColor(.white)
+            .font(.largeTitle)
     }
-    
-    private func monthName(_ index: Int) -> String {
-        Calendar.current.shortMonthSymbols[index]
+    var recent: some View {
+        Text("hello there")
+            .card()
+            .frame(height: 200)
     }
 }
+
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {

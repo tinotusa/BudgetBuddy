@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2134231C2701545A00068F42 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2134231B2701545A00068F42 /* Constants.swift */; };
+		2134231E2701571400068F42 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2134231D2701571400068F42 /* ViewExtensions.swift */; };
+		213423202701573800068F42 /* MonthlyTotalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2134231F2701573800068F42 /* MonthlyTotalBarChart.swift */; };
+		2134232227016CFB00068F42 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2134232127016CFB00068F42 /* PieChartView.swift */; };
 		21AE9B3F26FF200F0053A13E /* BudgetBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AE9B3E26FF200F0053A13E /* BudgetBuddyApp.swift */; };
 		21AE9B4126FF200F0053A13E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AE9B4026FF200F0053A13E /* ContentView.swift */; };
 		21AE9B4326FF20110053A13E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21AE9B4226FF20110053A13E /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2134231B2701545A00068F42 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = SOURCE_ROOT; };
+		2134231D2701571400068F42 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		2134231F2701573800068F42 /* MonthlyTotalBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTotalBarChart.swift; sourceTree = "<group>"; };
+		2134232127016CFB00068F42 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		21AE9B3B26FF200F0053A13E /* BudgetBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AE9B3E26FF200F0053A13E /* BudgetBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetBuddyApp.swift; sourceTree = "<group>"; };
 		21AE9B4026FF200F0053A13E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +87,7 @@
 		21AE9B3D26FF200F0053A13E /* BudgetBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				2134231B2701545A00068F42 /* Constants.swift */,
 				21AE9B3E26FF200F0053A13E /* BudgetBuddyApp.swift */,
 				21E4795E27007A29004A27F8 /* Extensions */,
 				21E4792D26FFF451004A27F8 /* Models */,
@@ -115,10 +124,12 @@
 				21AE9B4026FF200F0053A13E /* ContentView.swift */,
 				21E4793227000011004A27F8 /* HomeView.swift */,
 				21E47941270045D5004A27F8 /* HistoryView.swift */,
+				2134232127016CFB00068F42 /* PieChartView.swift */,
 				21E4793026FFFD2B004A27F8 /* LoginView.swift */,
 				21E47937270000BE004A27F8 /* AddView.swift */,
 				21E4796127007A5E004A27F8 /* ItemRowView.swift */,
 				21E4796327007C2A004A27F8 /* CustomRoundedRectangle.swift */,
+				2134231F2701573800068F42 /* MonthlyTotalBarChart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				21E4795F27007A3C004A27F8 /* DoubleExtension.swift */,
+				2134231D2701571400068F42 /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,8 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				21E4793327000012004A27F8 /* HomeView.swift in Sources */,
+				2134231C2701545A00068F42 /* Constants.swift in Sources */,
 				21E4793C2700160C004A27F8 /* ItemType.swift in Sources */,
+				213423202701573800068F42 /* MonthlyTotalBarChart.swift in Sources */,
 				21E47938270000BE004A27F8 /* AddView.swift in Sources */,
+				2134231E2701571400068F42 /* ViewExtensions.swift in Sources */,
 				21AE9B4826FF20110053A13E /* Persistence.swift in Sources */,
 				21E47942270045D5004A27F8 /* HistoryView.swift in Sources */,
 				21E4793F27001B3F004A27F8 /* BudgetItem+CoreDataClass.swift in Sources */,
@@ -224,6 +239,7 @@
 				21E4793126FFFD2B004A27F8 /* LoginView.swift in Sources */,
 				21E4792F26FFF45D004A27F8 /* User.swift in Sources */,
 				21E4793A27000183004A27F8 /* UserModel.swift in Sources */,
+				2134232227016CFB00068F42 /* PieChartView.swift in Sources */,
 				21E4796027007A3C004A27F8 /* DoubleExtension.swift in Sources */,
 				21E4794027001B3F004A27F8 /* BudgetItem+CoreDataProperties.swift in Sources */,
 				21E4796227007A5E004A27F8 /* ItemRowView.swift in Sources */,
